@@ -1,12 +1,12 @@
 import "./App.css";
 import Header from "./componets/header/Header";
-import CharacterGrid from "./componets/characters/CharacterGrid";
+import Fetch from "./api/Fetch";
 
 const App = () => {
   return (
-    <div className="App">
+    <div className="container">
       <Header />
-      <CharacterGrid />
+      <Fetch />
     </div>
   );
 };

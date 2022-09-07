@@ -2,9 +2,7 @@ import React from "react";
 import spinner from "../../img/spinner.gif";
 
 const CharacterGrid = ({ items, isLoading }) => {
-  console.log("Here 1");
   if (isLoading) {
-    console.log("Here 2");
     return (
       <div
         style={{ display: "flex", justifyContent: "center", marginTop: "4rem" }}
@@ -13,6 +11,12 @@ const CharacterGrid = ({ items, isLoading }) => {
       </div>
     );
   }
+  const characters = items.map((character) => (
+    <section key={character.char_id}>
+      <h4>{character.name}</h4>
+    </section>
+  ));
+  return <div className="cards">{characters}</div>;
 };
 
 export default CharacterGrid;

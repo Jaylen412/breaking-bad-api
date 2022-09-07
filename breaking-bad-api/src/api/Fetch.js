@@ -16,8 +16,7 @@ const Fetch = () => {
     };
     fetchItems();
   }, []);
-
-  return <CharacterGrid isLoading={isLoading} items={items} />;
+  return <CharacterGrid items={items} isLoading={isLoading} />;
 };
 
 export default Fetch;
