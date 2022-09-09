@@ -1,4 +1,5 @@
 import React from "react";
+import CharacterItem from "./CharacterItem.js";
 import spinner from "../../img/spinner.gif";
 
 const CharacterGrid = ({ items, isLoading }) => {
@@ -11,9 +12,10 @@ const CharacterGrid = ({ items, isLoading }) => {
       </div>
     );
   }
+
   const characters = items.map((character) => (
     <section key={character.char_id}>
-      <h4>{character.name}</h4>
+      <CharacterItem item={character} />
     </section>
   ));
   return <div className="cards">{characters}</div>;
